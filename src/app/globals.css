@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
+@theme {
+  /* Najot Taʼlim brend ranglari (Brendbuk 2025) */
+  --color-navy: #0f1826;
+  --color-navy-deep: #092145;
+  --color-blue: #013682;
+  --color-blue-2: #0c1523;
+
+  --color-brand: #0eb182;
+  --color-brand-bright: #00dd9d;
+  --color-brand-dark: #0a8f68;
+
+  --color-gold: #ae8d5e;
+  --color-gold-light: #e0c196;
+
+
+  --color-background: #ffffff;
+  --color-foreground: #0f1826;
+
+  --font-sans: var(--font-haas), "Helvetica Neue", Arial, sans-serif;
+
+  /* Brend gradient */
+  --gradient-brand: linear-gradient(135deg, #013682 0%, #0c1523 100%);
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1826;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Uzun ALL CAPS oʻzbekcha soʻzlar mobilda chiqib ketmasin */
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Brend gradient yordamchi klassi */
+.bg-brand-gradient {
+  background: var(--gradient-brand);
+}
+
+/* Kurs kategoriyalari uchun qoʻshimcha gradientlar */
+.bg-blue-gradient {
+  background: linear-gradient(150deg, #2e6bd6, #013682);
+}
+.bg-green-gradient {
+  background: linear-gradient(135deg, #00dd9d, #0eb182);
+}
+
+/* Yashil highlight matn */
+.text-gradient-brand {
+  background: linear-gradient(90deg, #00dd9d, #0eb182);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Nozik grid pattern (hero fon) */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.animate-marquee-left {
+  animation: marquee-left var(--marquee-duration, 40s) linear infinite;
+}
+.animate-marquee-right {
+  animation: marquee-right var(--marquee-duration, 40s) linear infinite;
 }

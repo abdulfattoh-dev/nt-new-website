@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Brand source assets (large: brandbook PDF, videos, font archives) — reference only
+/1. Base Files/
+/1. Base Files old/
+/1. Base Files new/
