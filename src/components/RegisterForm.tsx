@@ -8,9 +8,11 @@ import { Icon } from "@/components/Icon";
 export function RegisterForm({
   courseName,
   compact = false,
+  bare = false,
 }: {
   courseName?: string;
   compact?: boolean;
+  bare?: boolean; // modal ichida — tashqi karta uslubisiz (rounded/shadow/padding)
 }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -37,7 +39,7 @@ export function RegisterForm({
 
   if (sent) {
     return (
-      <div className="rounded-2xl bg-white p-8 text-center shadow-lg ring-1 ring-slate-100">
+      <div className={bare ? "text-center" : "rounded-2xl bg-white p-8 text-center shadow-lg ring-1 ring-slate-100"}>
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand/10">
           <Icon name="check" size={26} className="text-brand" />
         </div>
@@ -52,9 +54,7 @@ export function RegisterForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-100 sm:p-8 ${
-        compact ? "" : ""
-      }`}
+      className={bare ? "" : "rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-100 sm:p-8"}
     >
       {!compact && (
         <div className="mb-6">

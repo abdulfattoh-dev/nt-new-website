@@ -173,18 +173,6 @@ export const graduateWorkplaces: GraduateWorkplace[] = [
   { name: "Qurilish vazirligi", logo: "/brands/Qurilish-vazirligi.png" },
 ];
 
-// Bitiruvchilar ishlayotgan kompaniyalar (kurs sahifalarida) — NAMUNAVIY
-export const graduateCompanies = [
-  "Uzum",
-  "IT Park",
-  "EPAM",
-  "Click",
-  "Payme",
-  "TBC Bank",
-  "Beeline",
-  "Infinbank",
-];
-
 export const advantages: { icon: string; title: string; text: string }[] = [
   {
     icon: "award",

@@ -11,5 +11,6 @@ export const navLinks: NavLink[] = [
   { href: "/#natijalar", label: "Bitiruvchilar" },
   { href: "https://edfix.uz", label: "Onlayn taʼlim", external: true },
   { href: "/blog", label: "Blog" },
+  { href: "/savollar", label: "Savollar" },
   { href: "/#biz-haqimizda", label: "Biz haqimizda" },
 ];

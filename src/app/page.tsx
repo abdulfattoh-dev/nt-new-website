@@ -1,16 +1,14 @@
-import type { CSSProperties } from "react";
-import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
 import { CoursesSection } from "@/components/CoursesSection";
 import { Mentors } from "@/components/Mentors";
 import { StorySpotlight } from "@/components/StorySpotlight";
+import { GraduateWorkplaces } from "@/components/GraduateWorkplaces";
 import { Locations } from "@/components/Locations";
-import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 import { RegisterForm } from "@/components/RegisterForm";
-import { advantages, extras, commonFaq, graduateWorkplaces, site } from "@/data/site";
+import { advantages, extras, site } from "@/data/site";
 import { Icon, type IconName } from "@/components/Icon";
 
 const forYou: { icon: IconName; text: string }[] = [
@@ -21,13 +19,6 @@ const forYou: { icon: IconName; text: string }[] = [
     text: "Tajribali mentorlardan bilim olib, professional kadr boʻlmoqchi boʻlsangiz",
   },
   { icon: "wrench", text: "Yangi bilimlarni amaliyot bilan mustahkamlamoqchi boʻlsangiz" },
-];
-
-const workplaceChunkSize = Math.ceil(graduateWorkplaces.length / 3);
-const workplaceRows = [
-  graduateWorkplaces.slice(0, workplaceChunkSize),
-  graduateWorkplaces.slice(workplaceChunkSize, workplaceChunkSize * 2),
-  graduateWorkplaces.slice(workplaceChunkSize * 2),
 ];
 
 export default function Home() {
@@ -160,46 +151,11 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            <div className="mt-16 border-t border-white/10 pt-12">
-              <h3 className="text-center text-xl font-bold text-white">
-                Bitiruvchilarimiz ish joylari
-              </h3>
-            </div>
-          </div>
-
-          {/* Bitiruvchilarimiz ish joylari — chegaradan chiqib, butun kenglikka choʻziladi */}
-          <div className="mt-10 space-y-4">
-            {workplaceRows.map((row, i) => (
-              <div key={i} className="overflow-hidden">
-                <div
-                  className={`flex w-max gap-4 ${
-                    i % 2 === 0 ? "animate-marquee-left" : "animate-marquee-right"
-                  }`}
-                  style={{ "--marquee-duration": `${row.length * 2.4}s` } as CSSProperties}
-                >
-                  {[...row, ...row].map((w, idx) => (
-                    <div
-                      key={`${w.name}-${idx}`}
-                      className="flex h-24 w-44 shrink-0 items-center justify-center rounded-2xl bg-white p-4 shadow-sm sm:h-28 sm:w-52"
-                    >
-                      <Image
-                        src={w.logo}
-                        alt={w.name}
-                        width={160}
-                        height={64}
-                        className="h-auto max-h-12 w-auto max-w-full object-contain sm:max-h-14"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
-        {/* Bizning manzillar */}
-        <Locations />
+        {/* Bitiruvchilarimiz ish joylari */}
+        <GraduateWorkplaces />
 
         {/* Roʻyxatdan oʻtish (CTA) */}
         <section id="royxat" className="scroll-mt-20 bg-white py-20 sm:py-28">
@@ -230,22 +186,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="bg-white py-20 sm:py-28">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
-              <span className="text-sm font-semibold uppercase tracking-wider text-brand">
-                FAQ
-              </span>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight uppercase text-navy sm:text-4xl">
-                Koʻp soʻraladigan savollar
-              </h2>
-            </div>
-            <div className="mt-12">
-              <Faq items={commonFaq} />
-            </div>
-          </div>
-        </section>
+        {/* Bizning manzillar */}
+        <Locations />
       </main>
       <Footer />
     </>

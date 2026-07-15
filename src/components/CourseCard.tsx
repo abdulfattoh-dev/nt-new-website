@@ -19,9 +19,9 @@ export function CourseCard({ course }: { course: Course }) {
     >
       {/* Band */}
       <div
-        className={`relative flex items-center justify-center overflow-hidden ${
-          course.squareImage ? "aspect-square" : "h-32"
-        } ${course.image ? (course.squareImage ? "" : "bg-[#9fcbfc]") : style.band}`}
+        className={`relative flex h-32 items-center justify-center overflow-hidden ${
+          course.image ? "bg-[#9fcbfc]" : style.band
+        }`}
       >
         {course.image ? (
           <Image
@@ -29,9 +29,7 @@ export function CourseCard({ course }: { course: Course }) {
             alt={course.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={`transition duration-300 group-hover:scale-105 ${
-              course.squareImage ? "object-cover" : "object-contain"
-            }`}
+            className="object-contain transition duration-300 group-hover:scale-105"
           />
         ) : (
           <>
