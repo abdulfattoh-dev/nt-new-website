@@ -55,10 +55,9 @@ export function StorySpotlight() {
                 className="relative aspect-9/16 w-56 shrink-0 snap-start overflow-hidden rounded-2xl bg-black shadow-sm sm:w-64 lg:w-72"
               >
                 <iframe
-                  src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1&playsinline=1&controls=0`}
+                  src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1&playsinline=1&controls=0&cc_load_policy=0`}
                   title="Bitiruvchi video-hikoyasi"
                   allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
                   className="h-full w-full"
                 />
               </div>
