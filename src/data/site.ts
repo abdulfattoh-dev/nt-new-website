@@ -182,12 +182,12 @@ export const advantages: { icon: string; title: string; text: string }[] = [
   {
     icon: "briefcase",
     title: "Ishga joylashtirish",
-    text: "TechJobs loyihasi orqali 2000+ oʻquvchimiz ishga joylashgan. Eksportyor kompaniyada 5 mln soʻmgacha mukofot.",
+    text: "Markazimiz bitiruvchilarni ish bilan taʼminlash uchun \"TechJobs\" kompaniyasiga asos solgan — hozirda 2000+ oʻquvchimiz shu orqali ishga joylashgan.",
   },
   {
     icon: "users",
     title: "Kuchli mentorlar",
-    text: "Malakali, soha professionallaridan iborat tajribali ustozlar jamoasi.",
+    text: "Malakali mutaxassislardan kuchli bilimlar oling.",
   },
   {
     icon: "building",
@@ -200,9 +200,24 @@ export const advantages: { icon: string; title: string; text: string }[] = [
     text: "Qizlar uchun 10%, ingliz tili C1+ sertifikat egalariga 10% chegirma.",
   },
   {
-    icon: "star",
-    title: "Sertifikat + HR tayyorlov",
-    text: "Kurs soʻngida sertifikat va maxsus \"HR suhbatlariga tayyorlov\" kursi.",
+    icon: "rocket",
+    title: "StartUP inkubatsiyasi",
+    text: "Gʻoya egalari uchun Najot Taʼlim inkubatsion loyihasi orqali startapingizni rivojlantiring.",
+  },
+  {
+    icon: "compass",
+    title: "Edfix platformasi",
+    text: "Edfix platformasidan HR va kompyuter savodxonligi darslarini bepul oʻrganing.",
+  },
+  {
+    icon: "gift",
+    title: "Mutolaa premium",
+    text: "Mutolaa mobil ilovasidan premium obunani bepul qoʻlga kiriting.",
+  },
+  {
+    icon: "crown",
+    title: "Najot Taʼlim mobil ilovasi",
+    text: "Shaxsiy ilova orqali darslar jadvali va yutuqlaringizni doim nazorat qiling.",
   },
 ];
 

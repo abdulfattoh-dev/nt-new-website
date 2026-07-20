@@ -7,10 +7,10 @@ export interface NavLink {
 }
 
 export const navLinks: NavLink[] = [
-  { href: "/#kurslar", label: "Kurslar" },
+  { href: "/kurslar", label: "Kurslar" },
   { href: "/#natijalar", label: "Bitiruvchilar" },
-  { href: "https://edfix.uz", label: "Onlayn taʼlim", external: true },
-  { href: "/blog", label: "Blog" },
-  { href: "/savollar", label: "Savollar" },
   { href: "/#biz-haqimizda", label: "Biz haqimizda" },
+  { href: "/blog", label: "Blog" },
+  { href: "https://edfix.uz", label: "Onlayn taʼlim", external: true },
+  { href: "/savollar", label: "FAQ" },
 ];

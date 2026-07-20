@@ -139,3 +139,18 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
+// Oʻquvchilarimiz natijalari — real YouTube Shorts (bitiruvchilar hikoyalari)
+export const resultShorts: string[] = [
+  "26oCymwG_NI",
+  "CpLKO-xDAP8",
+  "gXq4uE9JKZA",
+  "THpUcKw7B4U",
+  "JPNNCjU5asw",
+  "AY-qj2CTyp0",
+  "LURGyyhNlHg",
+  "l7FhKnK16BQ",
+  "cMaNmlfQmLg",
+  "slPwjX-iXHs",
+  "IG1psYOaJdI",
+];
+

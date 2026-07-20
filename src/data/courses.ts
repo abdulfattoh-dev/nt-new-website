@@ -141,18 +141,18 @@ export const courses: Course[] = [
     forWhom: [
       {
         icon: "rocket",
-        title: "Zamonaviy va talab yuqori kasb egasi boʻlishni istaganlar",
-        text: "Bugungi bozorda eng talabgir kasblardan biri — Full-stack dasturchilikni egallang.",
+        title: "Zamonaviy va talab yuqori boʻlgan kasb egasi boʻlishni istaganlar",
+        text: "Doimiy talabga ega, yuqori daromadli va istiqbolli sohada faoliyat yuritishni xohlaganlar uchun.",
       },
       {
         icon: "compass",
-        title: "Oʻz kasbini oʻzgartirmoqchi boʻlganlar",
-        text: "Hozirgi sohangizda kelajagingizni koʻrmasangiz — qaytadan yangi yoʻnalishda boshlang.",
+        title: "Oʻz kasbini oʻzgartirishni istaganlar",
+        text: "Agar oʻz kasbingizdan qoniqmayotgan yoki hozirgi kasbingizda oʻz kelajagingizni koʻrolmayotgan boʻlsangiz.",
       },
       {
         icon: "bulb",
         title: "Startup yaratishni istaganlar",
-        text: "Frontend, backend va AI koʻnikmalari bilan oʻz gʻoyangizni mahsulotga aylantiring.",
+        text: "Oʻz gʻoyalarini raqamli mahsulotga aylantirib, muvaffaqiyatli startup qurishni istaganlar uchun.",
       },
     ],
     learn: [
@@ -190,13 +190,32 @@ export const courses: Course[] = [
       "Toʻliq Full-Stack loyihalarni deploy qilish",
       "Professional portfolio va freelance",
     ],
-    salary: { min: "$400", avg: "$700", max: "$1300" },
+    salary: { min: "$300", avg: "$800", max: "$2000+" },
     price: {
       monthly: "1 600 000 soʻm",
       full: "13 000 000 soʻm",
-      note: "Bittada toʻlovda 3 mln soʻm tejaysiz · 2 mln soʻmlik bonuslar",
+      note: "Bittada toʻlovda 3 mln soʻm tejaysiz · 2 mln soʻmlik bonuslar · viloyat uchun 1 000 000 soʻm/oy",
+      regions: [
+        {
+          region: "Toshkent shahri",
+          monthly: "1 600 000 soʻm",
+          split: "7 250 000 soʻm (1 500 000 tejaysiz)",
+          full: "13 000 000 soʻm (3 000 000 tejaysiz)",
+          highlight: true,
+        },
+        {
+          region: "Viloyatlar uchun",
+          monthly: "1 000 000 soʻm",
+          split: "4 500 000 soʻm (1 000 000 tejaysiz)",
+          full: "8 000 000 soʻm (2 000 000 tejaysiz)",
+        },
+      ],
     },
-    laptop: laptopBasic,
+    laptop: {
+      cpu: "Intel Core i5 (12-avlod)",
+      ram: "8 GB",
+      storage: "SSD 256 GB yoki HDD 512 GB",
+    },
   },
   {
     slug: "kiberxavfsizlik",
@@ -213,27 +232,32 @@ export const courses: Course[] = [
       {
         icon: "cpu",
         title: "AyTi va texnologiyaga qiziqadiganlar",
-        text: "Zamonaviy texnologiyalar va tizimlar dunyosiga chuqur kirib boring.",
+        text: "Internet xavfsizligi, maʼlumotlarni himoya qilish va zamonaviy kiberxavfsizlik texnologiyalarini oʻrganmoqchi boʻlganlar uchun.",
       },
       {
         icon: "lock",
-        title: "Hakerlar faoliyatiga qiziqqanlar (etik, qonuniy usulda)",
-        text: "Etik xakerlik va pentesting koʻnikmalarini qonuniy, amaliy tarzda oʻrganing.",
+        title: "Yoshligidan hakerlar faoliyatiga qiziqqanlar",
+        text: "Hakerlar aslida qanday ishlashi, tizimlardagi zaifliklar qanday aniqlanishi va ular qanday himoyalanishini professional va qonuniy usulda oʻrganishni istaganlar uchun.",
       },
       {
         icon: "award",
-        title: "CS/AyTi yoʻnalishida tahsil olayotgan talabalar",
-        text: "Universitet bilimingizni real loyihalar va sertifikat bilan mustahkamlang.",
+        title: "IT yoʻnalishida tahsil olayotgan talabalar",
+        text: "CS, Software Engineering yoki IT yoʻnalishida tahsil olayotgan boʻlsangiz, bu kurs sizni nazariyadan amaliyotga olib chiqadi.",
       },
       {
         icon: "code",
-        title: "Junior dasturchilar va AyTi oʻqituvchilari",
-        text: "Mavjud dasturlash bilimingizga kiberxavfsizlik yoʻnalishini qoʻshib, qadringizni oshiring.",
+        title: "Junior dasturchilar",
+        text: "Python, Git va dasturlash asoslarini biladigan, xavfsiz dastur yaratish, OWASP, log tahlili va zamonaviy xavfsizlik vositalarini chuqur oʻrganasiz.",
+      },
+      {
+        icon: "userCheck",
+        title: "IT oʻqituvchilari",
+        text: "OS yoki tarmoq asoslarini oʻrgatadigan tajribali oʻqituvchi boʻlsangiz, bu kurs kiberxavfsizlikni amaliy yondashuvda oʻrgatish imkoniyatini beradi.",
       },
       {
         icon: "compass",
         title: "Kasbini oʻzgartirmoqchi boʻlganlar",
-        text: "Talab yuqori va istiqbolli kiberxavfsizlik sohasida yangi kasb egallang.",
+        text: "Xalqaro bozorda talab yuqori boʻlgan kiberxavfsizlik yoʻnalishida professional karyera qurishni istasangiz, bu kurs sizga mos keladi.",
       },
     ],
     learn: [
@@ -276,10 +300,11 @@ export const courses: Course[] = [
       "Cybersecurity GRC Assistant",
       "Freelance Pentester / Bug Bounty",
     ],
+    salary: { min: "$400", avg: "$800", max: "$2000+" },
     price: {
       monthly: "2 400 000 soʻm",
       full: "16 000 000 soʻm",
-      note: "Bittada toʻlovda 3 mln 200 ming tejaysiz",
+      note: "Bittada toʻlovda 3 mln 200 ming tejaysiz · viloyat uchun 1 800 000 soʻm/oy",
     },
     extraFaq: [
       {
@@ -292,9 +317,9 @@ export const courses: Course[] = [
       },
     ],
     laptop: {
-      cpu: "Intel Core i5 (8-avlod)",
+      cpu: "Intel Core i5 (12-avlod)",
       ram: "8 GB",
-      storage: "SSD 256 GB",
+      storage: "SSD 256 GB yoki HDD 512 GB",
       os: "Windows 10/11 yoki Linux (64-bit, virtuallashtirish yoqilgan)",
     },
   },
@@ -312,12 +337,12 @@ export const courses: Course[] = [
       {
         icon: "sparks",
         title: "Sunʼiy intellektga qiziquvchilar",
-        text: "Neyron tarmoqlar va deep learning dunyosiga noldan chuqur kirib boring.",
+        text: "SI va zamonaviy texnologiyalarni oʻrganishni istagan, Machine Learning, Deep Learning kabi texnologiyalar orqali aqlli tizimlar yaratishga qiziqadiganlar uchun.",
       },
       {
         icon: "graph",
-        title: "Bilimini keyingi bosqichga olib chiqmoqchi dasturchilar",
-        text: "Dasturlash bilimingizni Machine Learning va real loyihalar bilan yangi bosqichga olib chiqing.",
+        title: "Dasturchilar",
+        text: "Dasturlash boʻyicha mavjud bilimlarini keyingi bosqichga olib chiqib, Machine Learning modellar yaratish va ularni real loyihalarda qoʻllashni oʻrganmoqchi boʻlganlar uchun.",
       },
     ],
     learn: [
@@ -354,16 +379,16 @@ export const courses: Course[] = [
         items: ["End-to-end loyiha", "API", "Docker", "Cloud"],
       },
     ],
+    salary: { min: "$500", avg: "$900", max: "$2500" },
     price: {
       monthly: "2 400 000 soʻm",
       full: "16 000 000 soʻm",
       note: "Bittada toʻlovda 3 mln 200 ming tejaysiz",
     },
     laptop: {
-      cpu: "Intel Core i5 (10-avlod) yoki undan yuqori",
-      ram: "16 GB",
-      storage: "SSD 256 GB",
-      os: "Windows 11 yoki macOS (64-bit)",
+      cpu: "Intel Core i5 (12-avlod)",
+      ram: "8 GB",
+      storage: "SSD 256 GB yoki HDD 512 GB",
     },
   },
   {
@@ -380,27 +405,37 @@ export const courses: Course[] = [
       {
         icon: "briefcase",
         title: "Buxgalteriya, moliya sohasidagilar",
-        text: "Moliyaviy hisobotlarni SQL va Power BI orqali chuqur tahlil qilishni oʻrganing.",
+        text: "Hisob-kitobga asoslangan sohalarda faoliyat yuritayotgan, tahliliy koʻnikmalarini rivojlantirib, karyerasini yangi bosqichga olib chiqishni istaganlar uchun.",
       },
       {
         icon: "graph",
         title: "Sonlar, grafiklar va statistika bilan ishlashni yoqtiradiganlar",
-        text: "Raqamlar va statistikaga qiziqishingizni kasbiy koʻnikmaga aylantiring.",
+        text: "Sonlar, grafiklar, jadval va statistik maʼlumotlar bilan ishlashga qiziqadiganlar.",
       },
       {
         icon: "gem",
         title: "Talab va maoshi yuqori barqaror kasb egallamoqchi boʻlganlar",
-        text: "Bozorda talab yuqori va barqaror daromadli kasb sohibiga aylaning.",
+        text: "Kelajakda talab va maoshi yuqori boʻlgan, barqaror kasb egasi boʻlishni xohlaganlar.",
+      },
+      {
+        icon: "compass",
+        title: "Muammoni chuqur tahlil qilishga qiziquvchilar",
+        text: "Murakkab narsalarni tahlil qilishga va muammoni chuqur tushunib, uning sababini va yechimini topishga qiziqadiganlar.",
+      },
+      {
+        icon: "userCheck",
+        title: "Mantiq va faktlarga tayanib qaror qabul qiluvchilar",
+        text: "Aniq fanlarga, mantiq va faktlarga tayangan holda qaror qabul qilishga qiziqadiganlar.",
       },
       {
         icon: "target",
         title: "Biznes qarorlarini raqamlar asosida qabul qilmoqchi boʻlganlar",
-        text: "Intuitsiya oʻrniga aniq maʼlumotlarga asoslangan qarorlar qabul qilishni oʻrganing.",
+        text: "Biznes qarorlarini aniq raqamlar asosida amalga oshirishni oʻrganmoqchi boʻlganlar uchun.",
       },
       {
         icon: "rocket",
         title: "Marketing va sotuvda natijani data bilan oshirmoqchi boʻlganlar",
-        text: "Marketing va sotuv natijalarini data tahlili orqali yangi darajaga olib chiqing.",
+        text: "Marketing, sotuv yoki biznesda ishlayotgan va natijasini real data bilan oshirmoqchi boʻlganlar uchun.",
       },
     ],
     learn: [
@@ -425,13 +460,32 @@ export const courses: Course[] = [
         items: ["A/B testlar", "Regressiya", "Gipoteza tekshirish"],
       },
     ],
-    salary: { min: "$500", avg: "$700", max: "$1200" },
+    salary: { min: "$400", avg: "$700", max: "$2000+" },
     price: {
       monthly: "2 200 000 soʻm",
       full: "13 000 000 soʻm",
-      note: "Bittada toʻlovda 2 mln 400 ming tejaysiz",
+      note: "Bittada toʻlovda 2 mln 400 ming tejaysiz · viloyat uchun 1 500 000 soʻm/oy",
+      regions: [
+        {
+          region: "Toshkent shahri",
+          monthly: "2 200 000 soʻm",
+          split: "7 200 000 soʻm (1 000 000 tejaysiz)",
+          full: "13 000 000 soʻm (2 400 000 tejaysiz)",
+          highlight: true,
+        },
+        {
+          region: "Viloyatlar uchun",
+          monthly: "1 500 000 soʻm",
+          split: "4 900 000 soʻm (700 000 tejaysiz)",
+          full: "9 100 000 soʻm (1 400 000 tejaysiz)",
+        },
+      ],
     },
-    laptop: laptopBasic,
+    laptop: {
+      cpu: "Intel Core i5 (12-avlod)",
+      ram: "8 GB",
+      storage: "SSD 256 GB yoki HDD 512 GB",
+    },
   },
   {
     slug: "start-junior",
@@ -442,22 +496,37 @@ export const courses: Course[] = [
     level: "15–17 yosh",
     tagline: "Farzandingiz kelajagi shu yerdan boshlanadi",
     subtitle: "Start Junior: 15–17 yoshlilar uchun AyTi kurs.",
-    duration: "Boshlangʻich · amaliyotga yoʻnaltirilgan",
+    duration: "12 oy · haftada 3 kun · 1,5 soat",
     forWhom: [
       {
         icon: "users",
-        title: "Farzandini kelajakda AyTi mutaxassisi sifatida koʻrmoqchi ota-onalar",
-        text: "Farzandingiz uchun zamonaviy AyTi kasbiga mustahkam poydevor yarating.",
+        title: "Farzandini kelajakda mutaxassis sifatida koʻrmoqchi ota-onalar",
+        text: "Farzandingizni kelajakda kompyuter va texnologiyalarni yaxshi tushunadigan mutaxassis sifatida koʻrishni xohlaysiz.",
       },
       {
         icon: "rocket",
         title: "AyTi va dasturlashga qiziqadigan yoshlar",
-        text: "Dasturlash va texnologiyalarga qiziqishni amaliy loyihalar orqali rivojlantiring.",
+        text: "Farzandingizning AyTi va dasturlash sohasiga qiziqishi va bu yoʻnalishda rivojlanishini istaysiz.",
+      },
+      {
+        icon: "compass",
+        title: "Kompyuterdan foydali maqsadda foydalanishni istovchilar",
+        text: "Farzandingizning kompyuterdan faqat oʻyin uchun emas, balki taʼlim va rivojlanish vositasi sifatida foydalanishini xohlaysiz.",
       },
       {
         icon: "bulb",
         title: "Mantiqiy va kreativ fikrlashni rivojlantirmoqchi boʻlganlar",
-        text: "Oʻyin va mini-loyihalar orqali mantiqiy hamda ijodiy fikrlashni kuchaytiring.",
+        text: "Zamonaviy kasblar uchun zarur boʻlgan mantiqiy va kreativ fikrlash koʻnikmalarini rivojlantirmoqchisiz.",
+      },
+      {
+        icon: "gem",
+        title: "Kelajak kasbiga poydevor qoʻymoqchi boʻlganlar",
+        text: "Farzandingizning kelajak kasbiga bugundan poydevor qoʻyishni istaysiz.",
+      },
+      {
+        icon: "time",
+        title: "Vaqtini foydali oʻtkazishini istovchilar",
+        text: "Farzandingizning vaqtini foydali va mazmunli oʻtkazishini xohlaysiz.",
       },
     ],
     learn: [
@@ -487,13 +556,33 @@ export const courses: Course[] = [
       },
     ],
     price: {
-      monthly: "Maʼlumot uchun murojaat qiling",
-      note: "Batafsil narx uchun call-markazga qoʻngʻiroq qiling: 78 888 98 88",
+      monthly: "1 200 000 soʻm",
+      full: "10 800 000 soʻm",
+      note: "Ikkiga boʻlib toʻlovda 1 800 000 soʻm, bittada toʻlovda 3 600 000 soʻm tejaysiz · viloyat uchun 800 000 soʻm/oy",
+      regions: [
+        {
+          region: "Toshkent shahri",
+          monthly: "1 200 000 soʻm",
+          split: "6 300 000 soʻm (1 800 000 tejaysiz)",
+          full: "10 800 000 soʻm (3 600 000 tejaysiz)",
+          highlight: true,
+        },
+        {
+          region: "Viloyatlar uchun",
+          monthly: "800 000 soʻm",
+          split: "4 200 000 soʻm (1 200 000 tejaysiz)",
+          full: "7 200 000 soʻm (2 400 000 tejaysiz)",
+        },
+      ],
     },
     extraFaq: [
       {
         q: "Farzandim kompyuter va dasturlashni bilmasa ham qatnasha oladimi?",
         a: "Ha. Kurs boshlangʻich darajadagilar uchun tuzilgan, kompyuter savodxonligi va dasturlash asoslari noldan oʻrgatiladi.",
+      },
+      {
+        q: "Kurs yakunida farzandim qanday natijalarga erisha oladi?",
+        a: "Oʻquvchilar kompyuter savodxonligi, algoritmik fikrlash, muammo yechish va dasturlash asoslarini egallab, keyingi professional AyTi yoʻnalishlarini oʻrganish uchun mustahkam poydevorga ega boʻladilar.",
       },
     ],
   },
@@ -511,22 +600,32 @@ export const courses: Course[] = [
       {
         icon: "rocket",
         title: "Zamonaviy kasb egallamoqchi boʻlganlar",
-        text: "SMM — eng soʻnggi va talabgir kasblardan biri, bugun boshlab mutaxassis boʻling.",
+        text: "Ushbu soha eng soʻnggi zamonaviy va talabgir kasblardan hisoblanadi.",
       },
       {
         icon: "compass",
         title: "Oʻz kasbini oʻzgartirishni istaganlar",
-        text: "Hozirgi kasbingizda kelajagingizni koʻrmasangiz — bu sohada qaytadan boshlang.",
+        text: "Agar oʻz kasbingizdan qoniqmayotgan yoki hozirgi kasbingizda oʻz kelajagingizni koʻrolmayotgan boʻlsangiz, ushbu sohada karyera boshlashingiz mumkin.",
       },
       {
         icon: "time",
-        title: "Qisqa vaqtda daromadga chiqmoqchi boʻlganlar",
-        text: "Qisqa muddatda amaliy koʻnikma egallab, ilk mijozlar bilan ishlash darajasiga chiqing.",
+        title: "Qisqa vaqt ichida kasb egallab daromadga chiqishni istaganlar",
+        text: "Kurs davomida SMM boʻyicha zarur nazariy va amaliy koʻnikmalarni egallab, qisqa vaqt ichida ilk loyiha va mijozlar bilan ishlash darajasiga chiqishingiz mumkin.",
+      },
+      {
+        icon: "bulb",
+        title: "Oʻz bilimlarini mustahkamlamoqchi boʻlganlar",
+        text: "Agar siz SMM yoʻnalishini bilsangiz, kurs sizga zamonaviy strategiyalar va yangi vositalar orqali bilimingizni yanada oshirishga yordam beradi.",
+      },
+      {
+        icon: "gift",
+        title: "Qoʻshimcha daromad manbai boʻlishni istaganlar",
+        text: "Kundalik hayotda oʻqish yoki ish faoliyatingizdan tashqari boʻsh vaqtingizni samarali sarflab, qoʻshimcha kasb egallab, daromad topishingiz mumkin.",
       },
       {
         icon: "building",
-        title: "Oʻz biznesini internet orqali rivojlantirmoqchi boʻlganlar",
-        text: "Ijtimoiy tarmoqlar orqali biznesingizni rivojlantirib, sotuvni oshiring.",
+        title: "Oʻz biznesini internet orqali rivojlantirishni istaganlar",
+        text: "Biznesni rivojlantirish uchun eng samarali vositalaridan biri bu ijtimoiy tarmoqlardir. SMMʼni oʻrganish orqali biznesingizni rivojlantirib sotuv darajasini oshirishingiz mumkin.",
       },
     ],
     learn: [
@@ -574,11 +673,11 @@ export const courses: Course[] = [
       "Biznesni toʻliqligicha boshlangʻich tarzda ijtimoiy tarmoqlarini yuritib borish",
       "Marketing stategiyasini tuzish, analitika, media rejani shakllantirish, biznesni baholash va tahlil qila olish",
     ],
-    salary: { min: "$250", avg: "$600", max: "$2000" },
+    salary: { min: "$300", avg: "$600", max: "$1500" },
     price: {
       monthly: "2 200 000 soʻm",
       full: "7 600 000 soʻm",
-      note: "Bittada toʻlovda 1 200 ming tejaysiz · viloyat uchun 1 350 000 soʻm/oy",
+      note: "Bittada toʻlovda 1 200 ming tejaysiz · viloyat uchun 1 500 000 soʻm/oy",
       regions: [
         {
           region: "Toshkent shahri",
@@ -589,9 +688,9 @@ export const courses: Course[] = [
         },
         {
           region: "Viloyatlar uchun",
-          monthly: "1 350 000 soʻm",
-          split: "2 600 000 soʻm (200 ming tejaysiz)",
-          full: "4 800 000 soʻm (600 ming tejaysiz)",
+          monthly: "1 500 000 soʻm",
+          split: "2 850 000 soʻm (300 ming tejaysiz)",
+          full: "5 400 000 soʻm (600 ming tejaysiz)",
         },
       ],
     },
@@ -619,23 +718,33 @@ export const courses: Course[] = [
     forWhom: [
       {
         icon: "rocket",
-        title: "Zamonaviy kasb egasi boʻlishni istaganlar",
-        text: "Talab yuqori ijodiy kasb — videografiyani noldan mutaxassis darajasida egallang.",
+        title: "Zamonaviy kasb egasi boʻlishni istasaganlar",
+        text: "Videografiya bugungi kunda yuqori talabga ega sohaga aylanmoqda. 6 oy davomida asosiy bilim va koʻnikmalarni egallab, ilk mijozlar bilan ishlash darajasiga chiqishingiz mumkin.",
       },
       {
         icon: "camera",
-        title: "Mobilografiyadan professional videografiyaga oʻtmoqchilar",
-        text: "Telefon kamerasidan professional kamera va montajga oʻting.",
+        title: "Mobilografiyadan professional videografiyaga oʻtishni istaganlar",
+        text: "Mobilografiya bilan shugʻullanayotgan boʻlsangiz, ushbu kurs orqali professional kamera ishlari, montaj va yuqori darajadagi video ishlab chiqish koʻnikmalarini egallaysiz.",
       },
       {
         icon: "compass",
-        title: "Oʻz kasbini oʻzgartirmoqchi boʻlganlar",
-        text: "Ijodiy va istiqbolli yoʻnalishda yangidan boshlang.",
+        title: "Oʻz kasbini oʻzgartirishni istaganlar",
+        text: "Hozirgi kasbingizdan koʻra kelajagingizni boshqa sohada koʻrayotgan boʻlsangiz, videografiya siz uchun yangi imkoniyatlarni ochadi.",
+      },
+      {
+        icon: "gem",
+        title: "Oʻz bilimini yanada mustahkamlamoqchi boʻlganlar",
+        text: "Videografiya asoslarini bilsangiz, kurs davomida yangi usullar, zamonaviy trendlar va professional yondashuvlarni oʻrganib, mahoratingizni yuqori darajaga olib chiqasiz.",
+      },
+      {
+        icon: "gift",
+        title: "Qoʻshimcha kasb orqali daromad manbai izlayotganlar",
+        text: "Oʻqish yoki ish faoliyatidan tashqari boʻsh vaqtingizdan samarali foydalanib, videografiya orqali daromad qilishingiz mumkin.",
       },
       {
         icon: "video",
-        title: "Biznes uchun kuchli kontent yaratmoqchi boʻlganlar",
-        text: "Brendingiz uchun sifatli va taʼsirchan video kontent yaratishni oʻrganing.",
+        title: "Biznes uchun kuchli kontent yaratishni istaganlar",
+        text: "Biznes rivoji uchun kuchli omillardan biri — sifatli video kontent. Biznes va brendlar uchun professional videolar yaratishni oʻrganasiz.",
       },
     ],
     learn: [
@@ -646,17 +755,16 @@ export const courses: Course[] = [
       { title: "5-boʻlim. After Effects — professional effektlar", items: ["After Effects", "Professional effektlar"] },
       { title: "6-boʻlim. Mijoz topish va ular bilan ishlash", items: ["Mijoz topish", "Mijozlar bilan ishlash"] },
     ],
-    salary: { min: "$400", avg: "$700", max: "$1300" },
+    salary: { min: "$400", avg: "$700", max: "$1500" },
     price: {
       monthly: "2 200 000 soʻm",
       full: "11 400 000 soʻm",
       note: "Bittada toʻlovda 1 mln 800 ming tejaysiz",
     },
     laptop: {
-      cpu: "Intel Core i5 (11-avlod)",
+      cpu: "Intel Core i5 (12-avlod)",
       ram: "8 GB",
       storage: "SSD 256 GB yoki HDD 512 GB",
-      os: "Windows 11 (64-bit)",
     },
   },
   {
@@ -672,22 +780,27 @@ export const courses: Course[] = [
       {
         icon: "rocket",
         title: "Zamonaviy kasb oʻrganishni istaganlar",
-        text: "Telefon yordamida professional kontent yaratish kasbini tez muddatda egallang.",
+        text: "Mobilografiya hozirda eng talabgir yoʻnalishlardan biri boʻlib, oddiy telefon orqali ham professional kontent yaratish imkonini beradi.",
       },
       {
         icon: "image",
-        title: "Ijtimoiy tarmoqlar uchun kontent yaratmoqchilar",
-        text: "Instagram va boshqa tarmoqlar uchun sifatli vizual kontent tayyorlashni oʻrganing.",
+        title: "Ijtimoiy tarmoqlar uchun kontent yaratishni istaganlar",
+        text: "Instagram, Tik-Tok va YouTube kabi ijtimoiy tarmoqlar uchun sifatli, kreativ videolar tayyorlashni oʻrganasiz.",
       },
       {
         icon: "building",
         title: "Biznesi uchun kontent yaratmoqchi boʻlganlar",
-        text: "Oʻz biznesingiz uchun professional video-kontentni mustaqil yarating.",
+        text: "Biznes yoki shaxsiy sahifangiz rivoji uchun mahsulot yoki xizmatlaringizni professional tarzda tasvirga olishni oʻrganasiz.",
+      },
+      {
+        icon: "gift",
+        title: "Qoʻshimcha daromad topishni istaganlar",
+        text: "Video olish va montaj xizmatlarini koʻrsatib, qoʻshimcha daromad qilishingiz mumkin.",
       },
       {
         icon: "camera",
         title: "Telefonda video olishga qiziquvchilar",
-        text: "Smartfoningiz bilan professional darajadagi syomka va montaj qiling.",
+        text: "Telefon yordamida sifatli videolar yaratishni va yorugʻlik, montaj asoslari kabilarni amaliy tarzda oʻrganasiz.",
       },
     ],
     learn: [
@@ -698,10 +811,24 @@ export const courses: Course[] = [
       { title: "Canvada vizual dizayn", items: ["Canvada vizual dizayn"] },
       { title: "Hypic bilan vizualni yaxshilash", items: ["Hypic bilan vizualni yaxshilash"] },
     ],
+    salary: { min: "$250", avg: "$500", max: "$900+" },
     price: {
       monthly: "2 200 000 soʻm",
       full: "4 000 000 soʻm",
-      note: "2 oylik taʼlim · 60% amaliyot · 6 ta katta loyiha",
+      note: "Bittada toʻlovda 400 000 soʻm tejaysiz · viloyat uchun 1 200 000 soʻm/oy",
+      regions: [
+        {
+          region: "Toshkent shahri",
+          monthly: "2 200 000 soʻm",
+          full: "4 000 000 soʻm (400 000 tejaysiz)",
+          highlight: true,
+        },
+        {
+          region: "Viloyatlar uchun",
+          monthly: "1 200 000 soʻm",
+          full: "2 200 000 soʻm (200 000 tejaysiz)",
+        },
+      ],
     },
   },
   {
@@ -717,22 +844,27 @@ export const courses: Course[] = [
       {
         icon: "bulb",
         title: "Oʻz kasbi bor, samaradorlikni oshirmoqchi boʻlganlar",
-        text: "AI vositalari yordamida ish samaradorligingizni sezilarli darajada oshiring.",
+        text: "SI yordamida ishlarni tezroq bajarish, takroriy vazifalarni avtomatlashtirish orqali vaqtingizni tejay olasiz.",
       },
       {
         icon: "clipboard",
-        title: "Hisobot va taqdimotlar bilan ishlaydiganlar",
-        text: "Hisobot va taqdimotlarni AI yordamida tezroq va sifatli tayyorlashni oʻrganing.",
+        title: "KPI, hisobot va taqdimotlar ishining asosiy qismi boʻlganlar",
+        text: "SI orqali tez hisobot yozish, katta maʼlumotlarni tahlil qilish, taqdimotlar tayyorlash va vizual materiallarni yaratish osonlashadi.",
+      },
+      {
+        icon: "time",
+        title: "Kundalik hayotda samaradorlikni oshirmoqchi boʻlganlar",
+        text: "SI yordamida reja tuzish, matn yozish, tarjima qilish, vazifalarni eslatib turish va tartibga solish kabi vazifalarni osonlikcha bajarasiz.",
       },
       {
         icon: "image",
-        title: "Kontent va vizual material yaratmoqchilar",
-        text: "Midjourney va DALL·E kabi vositalar bilan vizual kontent yarating.",
+        title: "Kontent va vizual materiallar yaratmoqchi boʻlganlar",
+        text: "SI yordamida postlar yozish, dizayn gʻoyalarini yaratish, rasm, video generatsiyasi va vizual kontentlarni tez ishlab chiqish mumkin.",
       },
       {
         icon: "megaphone",
-        title: "Tadbirkorlar, SMM va marketing vakillari",
-        text: "AI vositalari orqali marketing va biznes jarayonlaringizni avtomatlashtiring.",
+        title: "Tadbirkorlar, SMM va marketing sohasi vakillari",
+        text: "SI yordamida reklama matnlari yozish, kontent reja tuzish, vizual materiallar yaratish va marketing jarayonlarini avtomatlashtirish mumkin.",
       },
     ],
     learn: [
@@ -751,6 +883,11 @@ export const courses: Course[] = [
         { region: "Viloyatlar uchun", full: "1 800 000 soʻm" },
       ],
     },
+    laptop: {
+      cpu: "Intel Core i3 (12-avlod)",
+      ram: "8 GB",
+      storage: "SSD 256 GB",
+    },
   },
   {
     slug: "ai-dizayn",
@@ -765,22 +902,27 @@ export const courses: Course[] = [
       {
         icon: "rocket",
         title: "Zamonaviy kasb oʻrganishni istaganlar",
-        text: "Sunʼiy intellekt yordamida zamonaviy dizayn kasbini tez muddatda egallang.",
+        text: "AI dizayn yoʻnalishi orqali siz zamonaviy va talab yuqori boʻlgan kasbni oʻrganib, qisqa vaqt ichida professional dizaynlar yaratish koʻnikmalariga ega boʻlasiz.",
       },
       {
         icon: "gem",
         title: "Dizayn koʻnikmalarini yuqori darajaga olib chiqmoqchilar",
-        text: "Mavjud dizayn bilimingizni AI vositalari bilan yangi darajaga olib chiqing.",
+        text: "Sunʼiy intellektdan foydalanib, kreativ gʻoyalarni tezroq amalga oshirish, sifatli vizuallar yaratish va zamonaviy dizayn trendlariga mos ishlashni oʻrganasiz.",
       },
       {
         icon: "image",
-        title: "Ijtimoiy tarmoqlar uchun kontent yaratmoqchilar",
-        text: "Postlar, storylar va bannerlarni tez va sifatli tarzda yaratishni oʻrganing.",
+        title: "Ijtimoiy tarmoqlar uchun kontent yaratishni istaganlar",
+        text: "Instagram, Telegram, TikTok va boshqa platformalar uchun kreativ postlar, bannerlar va vizuallar tayyorlashni oʻrganasiz.",
       },
       {
         icon: "gift",
         title: "Qoʻshimcha daromad topishni istaganlar",
-        text: "Dizayn koʻnikmalari orqali freelance tarzda qoʻshimcha daromad toping.",
+        text: "Qisqa vaqt ichida talab yuqori boʻlgan dizayn xizmatlarini koʻrsatishni oʻrganib, oʻz portfolioingizni shakllantirasiz.",
+      },
+      {
+        icon: "sparks",
+        title: "Dizayn sohasiga qiziquvchilar",
+        text: "Kreativlik va dizayn yaratishga qiziqsangiz, lekin murakkab dasturlarni oʻrganishga vaqtingiz boʻlmasa, AI vositalari yordamida qisqa muddatda sifatli dizaynlar yaratishni oʻrganasiz.",
       },
     ],
     learn: [
@@ -790,10 +932,29 @@ export const courses: Course[] = [
       { title: "Brending va vizual identitet", items: ["Logo", "Moodboard", "Korporativ uslub"] },
       { title: "Portfolio va mijozlar bilan ishlash", items: ["Portfolio tayyorlash", "Mijozlar bilan ishlash"] },
     ],
+    salary: { min: "$350", avg: "$700", max: "$1200+" },
     price: {
       monthly: "1 800 000 soʻm",
       full: "6 200 000 soʻm",
-      note: "Bittada toʻlovda 1 mln soʻm tejaysiz",
+      note: "Bittada toʻlovda 1 mln soʻm tejaysiz · viloyat uchun 1 500 000 soʻm/oy",
+      regions: [
+        {
+          region: "Toshkent shahri",
+          monthly: "1 800 000 soʻm",
+          full: "6 200 000 soʻm (1 000 000 tejaysiz)",
+          highlight: true,
+        },
+        {
+          region: "Viloyatlar uchun",
+          monthly: "1 500 000 soʻm",
+          full: "5 400 000 soʻm (600 000 tejaysiz)",
+        },
+      ],
+    },
+    laptop: {
+      cpu: "Intel Core i5 (12-avlod)",
+      ram: "8 GB",
+      storage: "SSD 256 GB",
     },
   },
 ];
