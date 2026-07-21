@@ -14,7 +14,10 @@ export function StorySpotlight() {
     if (!el || !card) return;
     const gap = parseFloat(getComputedStyle(el).columnGap || "16");
     const step = card.getBoundingClientRect().width + gap;
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
+    // overflow-hidden konteynerlarda native "smooth" scrollBy birinchi
+    // freym'dan keyin toʻxtab qoladi — shuning uchun darhol (aniq) siljitamiz,
+    // scroll-snap oʻzi kartani chetga tekislaydi.
+    el.scrollBy({ left: dir * step, behavior: "auto" });
   }
 
   return (

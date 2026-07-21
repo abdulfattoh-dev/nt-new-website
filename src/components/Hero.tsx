@@ -1,8 +1,34 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { stats } from "@/data/site";
 import { Icon } from "./Icon";
 
+const heroImages = [
+  "/hero/0O8A0066.JPG",
+  "/hero/0O8A7814.JPG",
+  "/hero/0O8A7958.JPG",
+  "/hero/0O8A8019.JPG",
+  "/hero/0O8A9012.JPG",
+  "/hero/0O8A9139.JPG",
+  "/hero/0O8A9553.JPG",
+  "/hero/DSC07809.JPG",
+  "/hero/IMG_0128.JPG",
+  "/hero/IMG_0169.JPG",
+];
+
 export function Hero() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((i) => (i + 1) % heroImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-brand-gradient">
       {/* Grid pattern + glow */}
@@ -55,10 +81,37 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Rasm uchun placeholder — docs/photo-guideline.md ga mos real foto bilan almashtiriladi */}
-          <div className="animate-fade-up flex aspect-[6/5] flex-col items-center justify-center gap-3 rounded-3xl border-2 border-dashed border-white/20 bg-white/5 text-slate-400">
-            <Icon name="image" size={40} className="text-white/25" />
-            <span className="text-sm font-medium">Rasm shu yerga qoʻshiladi</span>
+          {/* Hero rasmlar karuseli */}
+          <div className="animate-fade-up relative aspect-[6/5] overflow-hidden rounded-3xl ring-1 ring-white/10">
+            {heroImages.map((src, i) => (
+              <Image
+                key={src}
+                src={src}
+                alt="Najot Taʼlim oʻquvchilari"
+                fill
+                priority={i === 0}
+                sizes="(max-width: 1024px) 100vw, 560px"
+                className={`object-cover transition-opacity duration-1000 ease-in-out ${
+                  i === active ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-linear-to-t from-navy/40 via-transparent to-transparent" />
+
+            {/* Indikatorlar */}
+            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
+              {heroImages.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  aria-label={`${i + 1}-rasm`}
+                  onClick={() => setActive(i)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === active ? "w-5 bg-white" : "w-1.5 bg-white/40"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

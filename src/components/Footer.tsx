@@ -115,7 +115,7 @@ export function Footer() {
           </div>
 
           <div className="flex h-full flex-col justify-between">
-            <div className="flex justify-end gap-2.5">
+            <div className="flex justify-center gap-2.5 lg:justify-end">
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -140,7 +140,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <div className="flex justify-end gap-3">
+            <div className="flex justify-center gap-3 lg:justify-end">
               <a
                 href="/documents/tasdiqnoma.pdf"
                 target="_blank"

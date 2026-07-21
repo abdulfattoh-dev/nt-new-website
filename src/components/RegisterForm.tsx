@@ -20,8 +20,9 @@ export function RegisterForm({
   const [branch, setBranch] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
     if (name.trim().length < 2) {
@@ -33,8 +34,26 @@ export function RegisterForm({
       setError("Telefon raqamni toʻgʻri kiriting.");
       return;
     }
-    // TODO: backend/CRM integratsiyasi (hozircha frontend)
-    setSent(true);
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/enroll", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          course: courseName || course || undefined,
+          branch: branch || undefined,
+        }),
+      });
+      if (!res.ok) throw new Error("request_failed");
+      setSent(true);
+    } catch {
+      setError("Yuborishda xatolik yuz berdi. Iltimos, qoʻngʻiroq qiling: 78 888 98 88");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (sent) {
@@ -126,9 +145,10 @@ export function RegisterForm({
 
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-brand px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-brand-dark"
+        disabled={submitting}
+        className="mt-6 w-full rounded-full bg-brand px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Roʻyxatdan oʻtish
+        {submitting ? "Yuborilmoqda..." : "Roʻyxatdan oʻtish"}
       </button>
       <p className="mt-3 text-center text-xs text-slate-400">
         Yoki qoʻngʻiroq qiling: <a href="tel:+998788889888" className="font-semibold text-brand">78 888 98 88</a>

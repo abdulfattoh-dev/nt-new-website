@@ -3,6 +3,7 @@ import { neueHaas } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://najottalim.uz"),
   title: {
     default: "Najot Taʼlim — Zamonaviy AyTi taʼlim markazi",
     template: "%s | Najot Taʼlim",
@@ -23,8 +24,16 @@ export const metadata: Metadata = {
     title: "Najot Taʼlim — Zamonaviy AyTi taʼlim markazi",
     description:
       "12 000+ muvaffaqiyatli bitiruvchi. Dasturlash, dizayn va marketing kurslari.",
+    url: "https://najottalim.uz",
+    siteName: "Najot Taʼlim",
     locale: "uz_UZ",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Najot Taʼlim — Zamonaviy AyTi taʼlim markazi",
+    description:
+      "12 000+ muvaffaqiyatli bitiruvchi. Dasturlash, dizayn va marketing kurslari.",
   },
 };
 
