@@ -26,9 +26,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "missing_fields" }, { status: 400 });
   }
 
+  // Sarlavha Bitrix'dagi mavjud konventsiya boʻyicha: "nomer | kurs | filial"
+  // (masalan: "+998907897728 | Prompt | Namangan"). Sotuv boʻlimi lead
+  // roʻyxatidayoq asosiy maʼlumotni koʻradi.
+  const title =
+    [phone.trim(), course?.trim(), branch?.trim()].filter(Boolean).join(" | ") ||
+    "Saytdan roʻyxatdan oʻtish";
+
   const commentLines = [
     course && `Kurs: ${course}`,
     branch && `Filial: ${branch}`,
+    `Telefon: ${phone}`,
     "Manba: najottalim.uz sayti",
   ].filter(Boolean);
 
@@ -37,11 +45,11 @@ export async function POST(request: Request) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       fields: {
-        TITLE: course ? `${course} — roʻyxatdan oʻtish` : "Saytdan roʻyxatdan oʻtish",
+        TITLE: title,
         NAME: name,
         PHONE: [{ VALUE: phone, VALUE_TYPE: "WORK" }],
         COMMENTS: commentLines.join("\n"),
-        SOURCE_ID: "WEB",
+        SOURCE_ID: "UC_5QGUNK", // Bitrix'dagi "web site" manbasi
         SOURCE_DESCRIPTION: "najottalim.uz",
       },
       params: { REGISTER_SONET_EVENT: "Y" },
